@@ -28,16 +28,15 @@ public class MainActivity extends AppCompatActivity {
            }
        });
 
-        NavigationView navigationView=findViewById(R.id.navigation1);
+        NavigationView navigationView=findViewById(R.id.navView);
         NavController navController= Navigation.findNavController(this,R.id.frag);
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id., R.id.,R.id.).build();
-       NavigationUI.setupWithNavController(navigationView,navController);
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.blankFragment, R.id.mainActivity2).build();
+        NavigationUI.setupWithNavController(navigationView,navController);
 
     }
 
     @Override
     public boolean onSupportNavigateUp(){
-
        NavController navController = Navigation.findNavController(this, R.id.frag);
         return NavigationUI.navigateUp(navController,mAppBarConfiguration)||super.onSupportNavigateUp();
     }

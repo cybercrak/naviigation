@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer"
+    tools:openDrawer="start"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -28,7 +30,8 @@
             android:layout_height="30dp"
             android:layout_marginLeft="8dp"
             android:id="@+id/burger"
-            android:src="@drawable/ic_baseline_menu_24"/>
+            android:src="@drawable/ic_baseline_menu_24"
+            android:layout_marginStart="8dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -38,28 +41,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.01" />
+            app:layout_constraintTop_toTopOf="parent"/>
         </LinearLayout>
 
         <fragment
+            android:id="@+id/frag"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:id="@+id/frag"
-            android:layout_height="match_parent"
-            android:defaultnavhost="true"
-            android:navGraph="true"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
             app:navGraph="@navigation/navigation1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 <com.google.android.material.navigation.NavigationView
+    android:id="@+id/navView"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layout_gravity="start"
