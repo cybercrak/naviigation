@@ -4,9 +4,9 @@
     android:title="Extras"
     android:id="+@id/extras1"/>
     <item
-        android:title="Extras"
+        android:title="Settings"
         android:id="+@id/extras2"/>
     <item
-        android:title="Extras"
+        android:title="Home"
         android:id="+@id/extras"/>
 </menu>

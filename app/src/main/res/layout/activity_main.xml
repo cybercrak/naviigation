@@ -23,7 +23,12 @@
             app:layout_constraintVertical_bias="0.01">
 
 
-
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/burger"
+            android:src="@drawable/ic_baseline_menu_24"/>
 
         <TextView
             android:id="@+id/textView"
@@ -40,11 +45,23 @@
         <fragment
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
+            android:id="@+id/frag"
             android:layout_height="match_parent"
+            android:defaultnavhost="true"
+            android:navGraph="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:navGraph="@navigation/navigation1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+<com.google.android.material.navigation.NavigationView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    app:menu="@menu/menu1"/>
 </androidx.drawerlayout.widget.DrawerLayout>
