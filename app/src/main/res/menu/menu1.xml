@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:title="Extras"
-        android:id="@+id/extras1"/>
+        android:id="@+id/blankFragment"/>
     <item
         android:title="Settings"
-        android:id="@+id/extras2"/>
+        android:id="@+id/mainActivity2"/>
     <item
         android:title="Home"
         android:id="@+id/extras"/>
